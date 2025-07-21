@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js-calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>calculator</h1>
 
-    <input type="text" class="result">
+    <input type="text" class="result" disabled>
     <div id="container">
         <button class="one">1</button>
         <button class="two">2</button>
@@ -17,16 +18,17 @@
         <button class="four">4</button>
         <button class="five">5</button>
         <button class="six">6</button>
-        <button class="divide">/</button><br>
+        <button class="divide operation wid">/</button><br>
         <button class="seven">7</button>
         <button class="eight">8</button>
         <button class="nine">9</button>
-        <button class="multiple">*</button><br>
+        <button class="multiple operation wid">*</button><br>
         <button class="zero">0</button>
-        <button class="negative">-</button>
-        <button class="plus">+</button>
-        <button class="answer">=</button>
+        <button class="negative operation">-</button>
+        <button class="plus operation">+</button>
+        <button class="answer wid">=</button>
     </div>
 
+    <script src="javascript.js" defer></script>
 </body>
 </html>
