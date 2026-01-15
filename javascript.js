@@ -36,13 +36,13 @@ function operate(fnumber, operator, snumber) {
     if (operator == "+") {
         result = add(fnumber, snumber)
     }
-    else if (operate == "-") {
+    else if (operator == "-") {
         result = subtract(fnumber, snumber)
     }
-    else if (operate == "*") {
+    else if (operator == "*") {
         result = multiply(fnumber, snumber)
     }
-    else if (operate == "*") {
+    else if (operator == "") {
         result = divide(fnumber, snumber)
     }
     else {
@@ -68,22 +68,18 @@ function equate() {
                         if (num1 == result) {
                             num2 = ""
                         }
-
-
                     }
-
                 })
             })
             console.log(`result ${num1}`)
             textbox.value = result
-
         }
     })
 
 }
 
 equate()
-
+clear()
 
 function add(a, b) {
     return a + b;
@@ -97,6 +93,25 @@ function divide(a, b) {
     return a / b;
 }
 
-function multiply() {
+function multiply(a, b) {
     return a * b;
+}
+
+function clear() {
+    /* 
+let num1 = "";
+let operatorvalue = "";
+let num2 = "";
+let result = "";
+    */
+
+    document.querySelectorAll('.clear').forEach(e => {
+        e.addEventListener('click', () => {
+            num1 = ""
+            num2 = ""
+            operatorvalue = ""
+            result = ""
+            textbox.value = ""
+        })
+    })
 }
